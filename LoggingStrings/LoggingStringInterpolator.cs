@@ -35,6 +35,8 @@ namespace LoggingStrings
         {
             _labels.Add(_label.ToString(), t);
             _label.Clear();
+
+            _defaultHandler.AppendFormatted<T>(t, format);
         }
 
         public override string ToString()
